@@ -29,6 +29,6 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun PantallaInicial() {
-    // Pantalla base temporal
+    // Pantalla base temporal de la chiqui
     Text(text = "VelkyVet - Proyecto base")
 }
