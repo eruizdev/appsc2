@@ -3,32 +3,20 @@ package com.velkyvet.app
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
+import androidx.activity.enableEdgeToEdge
+import androidx.navigation.compose.rememberNavController
+import com.velkyvet.app.navigation.NavegacionPrincipal
 import com.velkyvet.app.ui.theme.VelkyVetTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContent {
             VelkyVetTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    PantallaInicial()
-                }
+                val nav = rememberNavController()
+                NavegacionPrincipal(nav = nav)
             }
         }
     }
-}
-
-@Composable
-fun PantallaInicial() {
-    // Pantalla base temporal
-    Text(text = "VelkyVet - Proyecto base")
 }
