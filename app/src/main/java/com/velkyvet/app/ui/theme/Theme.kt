@@ -19,7 +19,6 @@ private val colores = lightColorScheme(
 @Composable
 fun VelkyVetTheme(contenido: @Composable () -> Unit) {
     MaterialTheme(
-        //Themes
         colorScheme = colores,
         content = contenido
     )
