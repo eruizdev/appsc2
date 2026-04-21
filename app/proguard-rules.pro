@@ -1,1 +1,1 @@
-# Reglas de ProGuard para release
+-keep class com.velkyvet.app.database.** { *; }
